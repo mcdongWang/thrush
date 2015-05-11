@@ -12,9 +12,9 @@ function listenToChange (file ){
        } 
 
    if (isWindows)
-        fs.watch(file ,{ persistent: true, interval: 10 } , onChg);
+        fs.watch(file ,{ persistent: true, interval: 1000 } , onChg);
     else
-        fs.watchFile(file ,{ persistent: true, interval: 10 } , onChg);
+        fs.watchFile(file ,{ persistent: true, interval: 1000 } , onChg);
     }
 function mapDir (dir ,ext) {
 
