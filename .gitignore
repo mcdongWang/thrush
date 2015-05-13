@@ -1,3 +1,5 @@
 www/tmp/*
 nohup.out
 config/pid
+
+*.out
