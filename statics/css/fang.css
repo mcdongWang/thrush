@@ -77,7 +77,7 @@ body{
 }
 
 .baseinfo p{
-    text-shadow:0 0 10px #ccc, 0 0 20px #ccc,0 0 30px #ccc,0 0 40px #aaa,0 0 70px #aaa,0 0 80px #aaa,0 0 100px #aaa,0 0 150px #aaa;
+    text-shadow:#ccc 0 0 10px ,#ccc 0 0 20px, #ccc 0 0 30px,#aaa 0 0 40px ,#aaa 0 0 70px;
 }
 .baseinfo a{
     color: #fff;
