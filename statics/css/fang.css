@@ -7,7 +7,7 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(/sky.jpg);
+    background-image: url(http://mcdong.u.qiniudn.com/sky.jpg);
     background-size: 100%;
     background-position-y: 0px;
 }
@@ -30,7 +30,7 @@ body{
     height: 200px;
     margin: 0 auto;
     border-radius: 100px;
-    background-image: url(/headimg.png);
+    background-image: url(http://mcdong.u.qiniudn.com/headimg.png);
     background-size: 100%;
     background-color: #ffffff;
     border: 4px solid #ffffff;
