@@ -1,0 +1,96 @@
+body{
+    color: #ffffff;
+    background-color: #000000;
+}
+.mon{
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(/sky.jpg);
+    background-size: 100%;
+    background-position-y: 0px;
+}
+.mon img{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.pageone{
+    height: 450px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -225px;
+    margin-left: -200px;
+}
+.head{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 100px;
+    background-image: url(/headimg.png);
+    background-size: 100%;
+    background-color: #ffffff;
+    border: 4px solid #ffffff;
+}
+.baseinfo{
+    margin: 20px auto;
+    text-align: center;
+    font-size: 36px;
+}
+.startBtn{
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    height: 50px;
+    width: 180px;
+    margin: 0 auto;
+    background-color: #ff6699;
+    cursor: pointer;
+    font-weight: bolder;
+    box-shadow: 0 0 30px #ccc,0 0 20px #ccc,0 0 10px #ccc;
+    -webkit-animation-name: breath;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.startBtn:hover{
+    -webkit-animation:indexend 0s;
+    box-shadow: 0 0 10px #ccc, 0 0 20px #ccc,0 0 30px #ccc;
+    transition: box-shadow 100ms ease-in-out;
+}
+
+@-webkit-keyframes 'breath' {
+    from {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.baseinfo p{
+    text-shadow:0 0 10px #ccc, 0 0 20px #ccc,0 0 30px #ccc,0 0 40px #aaa,0 0 70px #aaa,0 0 80px #aaa,0 0 100px #aaa,0 0 150px #aaa;
+}
+.baseinfo a{
+    color: #fff;
+}
+.baseinfo span{
+    font-size: 24px;
+}
+.info{
+    margin: 20px;
+}
+.info span{
+    margin: 10px 0;
+}
+.info a:hover{
+    color: #fff;
+}

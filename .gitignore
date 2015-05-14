@@ -1,5 +1,5 @@
 www/tmp/*
 nohup.out
 config/pid
-
+.DS_Store
 *.out

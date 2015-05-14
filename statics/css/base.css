@@ -15,10 +15,10 @@ a{color: #666; text-decoration: none;
 a:focus{outline: none;}
 em{font-style: normal;}
 html{_overflow-x: hidden;}
-body{ background-color: #f2f0f0; color: #666; font-size: 12px; font-family: Arial;}
+body{font-size: 12px; font-family: Arial;}
 
 .clear_f{
-	clear: both; overflow:hidden; height:0px; 
+	clear: both; overflow:hidden; height:0px;
 }
 
 header{
