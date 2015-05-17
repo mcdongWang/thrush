@@ -11,6 +11,8 @@ fml.define('page/fang', [], function(require, exports) {
             mousewheelControl: true,
             touchRatio : 3,
             mousewheelForceToAxis: true,
+            paginationClickable :true,
+            pagination : '.swiper-pagination',
             noSwipingClass : 'viewerBox',
             onSlideChangeStart: function(swiper){
                 // mySwiper.disableMousewheelControl()

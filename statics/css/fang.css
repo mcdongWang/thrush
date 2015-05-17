@@ -1,4 +1,5 @@
 body{
+    font-family: 'Microsoft YaHei';
     color: #ffffff;
     background-color: #000000;
 }
@@ -19,6 +20,9 @@ body{
     position:fixed;
     width: 100%;
     top: 0px;
+}
+.swiper-pagination-bullet{
+    background-color: #ffffff!important;
 }
 /*首页样式*/
 .p1{
