@@ -7,7 +7,7 @@ var conf = {
 			self = this;
 		this.setData(data);
 		this.listen(function(data){
-			self.cssLink = ['fang'];
+			self.cssLink = ['fang', 'swiper'];
 			return self.render('fang', data);
 		});
 	}

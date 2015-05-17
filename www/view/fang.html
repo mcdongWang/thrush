@@ -1,21 +1,122 @@
 <%# header.html #%>
 
+<!-- background -->
 <div class="mon">
-    <img src="http://mcdong.u.qiniudn.com/backpng.png">
+    <img class="sky" src="/sky.jpg">
+    <img class="mont" src="/backpng.png">
 </div>
-<div class="pageone">
-    <div class="head"></div>
-    <div class="baseinfo">
-        <p>方玉昕 Web前端</p>
-        <p class="info">
-            <span>TEL : 15122913505</span>
-            <br>
-            <a href="mailto:363534569@qq.com">
-                <span>E-mail : 229668002@qq.com</span>
-            </a>
-        </p>
+
+<!-- swiper container -->
+<div class="swiper-container">
+    <div class="swiper-wrapper" data-hash="pageIndex">
+        <div class="swiper-slide">
+            <div class="pageone">
+                <div class="head"></div>
+                <div class="baseinfo">
+                    <p>方玉昕 Web前端</p>
+                    <p class="info">
+                        <span>TEL : 15122913505</span>
+                        <br>
+                        <a href="mailto:363534569@qq.com">
+                            <span>E-mail : 229668002@qq.com</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="startBtn">开启简历之旅</div>
+                <div class="viewerBtn">图片查看器</div>
+            </div>
+        </div>
+        <div class="swiper-slide" data-hash="info">
+            <div class="content">
+                <p class="title">个人信息</p>
+                <p class="text info">天津理工大学</p>
+                <p class="text info">计算机科学与技术</p>
+                <p class="text info">专业成绩专业第三(前5%)</p>
+                <p class="text info">工商管理 双学位</p>
+                <p class="text info">专业成绩第5名(前10%)</p>
+                <p class="text info">2016年6月毕业 英语六级:461</p>
+
+            </div>
+        </div>
+        <div class="swiper-slide" data-hash="ablity">
+            <div class="content">
+                <p class="title">专业技能</p>
+                <p class="text ablity">熟练使用JavaScript jQuery</p>
+                <p class="text ablity">熟练掌握 html／css</p>
+                <p class="text ablity">熟悉 c/c++</p>
+                <p class="text ablity">了解 NodeJS 熟悉nodejs框架下开发</p>
+                <p class="text ablity">了解 SQL Java C#</p>
+                <p class="text ablity">工具类 git photoShop SublimeText</p>
+
+            </div>
+        </div>
+        <div class="swiper-slide" data-hash="exp">
+            <div class="content">
+                <p class="title">在校经历</p>
+                <p class="text">天津理工大学科技协会成员</p>
+                <p class="text">天津理工大学学生创新实践中心成员</p>
+                <p class="text">新生奖学金三等奖（12-13年度）</p>
+                <p class="text">校级三好学生（12-13/13-14年度）</p>
+                <p class="text">人民一等奖学金（12－13／13-14年度）</p>
+                <p class="text">全国大学生数学建模竞赛天津赛区一等奖</p>
+                <p class="text">华北五省及港澳台大学生计算机应用大赛二等奖</p>
+                <p class="text">多次参与学校组织的科技创新类比赛及活动</p>
+                <p class="text">多次参与校级院级活动及晚会的组织工作</p>
+                <p class="text">参与学院学校的网站建设工作</p>
+            </div>
+        </div>
+        <div class="swiper-slide" data-hash="pro">
+            <div class="content">
+                <p class="title">项目经验</p>
+                <p class="text proTitle">宾馆管理系统（NodeJs Mysql）</p>
+                <p class="text">自己独立完成整站开发</p>
+                <br>
+                <p class="text proTitle">NFC创意标签（安卓应用 Mysql Node）</p>
+                <p class="text">负责服务端接口提供</p>
+            </div>
+        </div>
+        <div class="swiper-slide" data-hash="vol">
+            <div class="content">
+                <p class="title">志愿活动</p>
+                <p class="text info">天津理工大学留学生志愿者</p>
+                <p class="text info">帮助留学生快速融入学校生活，一般负责接待新媒体类专业的留学生，帮助他们进行采访任务。</p>
+                <p class="text info">2014年天津夏季达沃斯志愿者</p>
+                <p class="text info">在天津站担任与会代表的迎送登记及酒店确认等任务，志愿服务期间与各部门密切协作，获得了领导和中外嘉宾的好评。</p>
+            </div>
+        </div>
+        <div class="swiper-slide" data-hash="self">
+            <div class="content">
+                <p class="title">自我评价</p>
+                <p class="text self">性格开朗，态度认真，敏锐的洞察力，轻微的偏执和强迫症，完美主义。</p>
+                <p class="text self">有较强的学习能力，能在短时间内学会新的技能。</p>
+                <p class="text self">具有很强的抗压能力。</p>
+                <p class="text self">具有很好的团队合作能力。</p>
+            </div>
+        </div>
+
+        <div class="swiper-slide" data-hash="end">
+            <div class="content">
+                <p class="text selfEnd">即使现在的自己还很平凡<br>也坚信着终有一日可以
+                <br>创造出让人惊叹的神奇！</p>
+            </div>
+        </div>
+        <div class="swiper-slide" data-hash="imageViewer">
+            <div class="viewerBox">
+                <div class="viewer">
+                    <img class="imgDemo" src="/viewerDemo.png">
+                </div>
+                <div class="toolbar">
+                    <input class="sclaeRange" type="range" max="4" min="0.1" value="1" step="0.1" name="pin" />
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="startBtn">开启简历之旅</div>
+
+    <!-- arrow -->
+    <div class="arrow">
+        <img src="/arrow.png">
+    </div>
+    <!-- arrow end -->
 </div>
 
 <%

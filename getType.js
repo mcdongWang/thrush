@@ -41,6 +41,7 @@ var contentTypes = {
 	"jar": "application/java-archive",
 	"jpeg": "image/jpeg",
 	"jpg": "image/jpeg",
+	"ico": "image/x-icon",
 	"js": "text/javascript",
 	"json": "application/json",
 	"latex": "application/x-latex",

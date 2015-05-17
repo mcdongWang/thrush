@@ -40,6 +40,7 @@ var contentTypes = {
 	"hdf": "application/x-hdf",
 	"hqx": "application/mac-binhex40",
 	"html": "text/html",
+	"ico": "image/x-icon",
 	"ice": "x-conference/x-cooltalk",
 	"ief": "image/ief",
 	"igs": "model/iges",

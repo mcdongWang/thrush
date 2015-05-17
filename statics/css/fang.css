@@ -2,27 +2,35 @@ body{
     color: #ffffff;
     background-color: #000000;
 }
+
+/*背景样式*/
 .mon{
     z-index: 0;
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(http://mcdong.u.qiniudn.com/sky.jpg);
-    background-size: 100%;
-    background-position-y: 0px;
 }
-.mon img{
+.mon .mont{
     position: fixed;
     bottom: 0;
     width: 100%;
 }
+.sky{
+    position:fixed;
+    width: 100%;
+    top: 0px;
+}
+/*首页样式*/
+.p1{
+    height: 100%;
+}
 .pageone{
-    height: 450px;
+    height: 540px;
     width: 400px;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: -225px;
+    margin-top: -270px;
     margin-left: -200px;
 }
 .head{
@@ -52,29 +60,64 @@ body{
     cursor: pointer;
     font-weight: bolder;
     box-shadow: 0 0 30px #ccc,0 0 20px #ccc,0 0 10px #ccc;
-    -webkit-animation-name: breath;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
+    -webkit-animation: breath 2s ease-in-out infinite;
+            animation: breath 2s ease-in-out infinite;
 }
 
 .startBtn:hover{
     -webkit-animation:indexend 0s;
+         animation:indexend 0s;
+    box-shadow: 0 0 10px #ccc, 0 0 20px #ccc,0 0 30px #ccc;
+    transition: box-shadow 100ms ease-in-out;
+}
+.viewerBtn{
+    /*margin-top: 30px;*/
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    height: 50px;
+    width: 180px;
+    margin: 30px auto;
+    background-color: #ff6699;
+    cursor: pointer;
+    font-weight: bolder;
+    box-shadow: 0 0 30px #ccc,0 0 20px #ccc,0 0 10px #ccc;
+    -webkit-animation: breath 2s ease-in-out infinite;
+            animation: breath 2s ease-in-out infinite;
+}
+
+.viewerBtn:hover{
+    -webkit-animation:indexend 0s;
+         animation:indexend 0s;
     box-shadow: 0 0 10px #ccc, 0 0 20px #ccc,0 0 30px #ccc;
     transition: box-shadow 100ms ease-in-out;
 }
 
-@-webkit-keyframes 'breath' {
-    from {
+@-webkit-keyframes breath {
+    from{
         opacity: 1;
     }
-    50% {
+    50%{
         opacity: 0.4;
     }
-    to {
+    to{
         opacity: 1;
     }
 }
+
+@keyframes breath {
+    from{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.4;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 
 .baseinfo p{
     text-shadow:#ccc 0 0 10px ,#ccc 0 0 20px, #ccc 0 0 30px,#aaa 0 0 40px ,#aaa 0 0 70px;
@@ -93,4 +136,146 @@ body{
 }
 .info a:hover{
     color: #fff;
+}
+/*引导箭头*/
+.arrow{
+    position: fixed;
+    z-index: 3;
+    bottom: 20px;
+    margin-left: -25px;
+    left: 50%;
+    -webkit-animation: goTop 1s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+            animation: goTop 1s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+}
+@-webkit-keyframes goTop{
+    from{
+        opacity: 1;
+    }
+    to{
+        -webkit-transform: translateY(-30px);
+                transform: translateY(-30px);
+        opacity: 0;
+    }
+}
+@keyframes goTop{
+    from{
+        opacity: 1;
+    }
+    to{
+        -webkit-transform: translateY(-30px);
+                transform: translateY(-30px);
+        opacity: 0;
+    }
+}
+.arrow img{
+    width: 50px;
+    height: 29px;
+}
+/*图片查看器*/
+.viewerBox{
+    padding: 10px;
+    width: 800px;
+    height: 500px;
+    /*background-color: white;*/
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -400px;
+    margin-top: -250px;
+}
+.viewer{
+    border-radius: 10px;
+    margin: 20 auto;
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    box-shadow: #ccc 0 0 10px ,#ccc 0 0 15px, #ccc 0 0 20px,#aaa 0 0 25px;
+}
+.imgDemo{
+    left: 0;
+    top: 0;
+    width: 100%;
+    cursor: move;
+    border-radius: 10px;
+    position: relative;
+}
+/*工具条*/
+.toolbar{
+    margin: 20 auto 0 auto;
+    width: 80%;
+    height: 10%;
+}
+/*文字内容*/
+.content{
+    width: 800px;
+    height: 600px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: -300px;
+    text-align: center;
+}
+/*内容标题*/
+.title{
+    font-size: 40px;
+    text-shadow:#ccc 0 0 10px ,#ccc 0 0 20px, #ccc 0 0 30px,#aaa 0 0 40px ,#aaa 0 0 70px;
+    font-weight: bolder;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 20px;
+    margin: 10px 200px;
+}
+/*基本内容*/
+.text{
+    padding: 8px;
+    font-size: 30px;
+    text-shadow:#ccc 0 0 10px ,#ccc 0 0 20px, #ccc 0 0 30px;
+}
+/*以下为适应*/
+.proTitle{
+    padding-top: 100px;
+}
+.info{
+    padding: 15px;
+}
+.ablity{
+    padding: 17px;
+}
+.self{
+    padding: 40px;
+}
+.selfEnd{
+    font-size: 40px;
+    line-height: 150px;
+    padding: 50px;
+}
+/*range滑块样式重置*/
+input[type="range"] {
+    -webkit-appearance: none;
+    -webkit-box-shadow: 0 1px 0 0px #424242,
+        0 1px 0 #060607 inset,
+        0px 2px 10px 0px black inset,
+        1px 0px 2px rgba(0, 0, 0, 0.4) inset,
+        0 0px 1px rgba(0, 0, 0, 0.6) inset;
+    margin-top: 2px;
+    background-color: #cccccc;
+    border-radius: 15px;
+    width: 660px;
+    height: 30px;
+    vertical-align: middle;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -330px;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: default;
+    top: 1px;
+    height: 28px;
+    width: 50px;
+    background: none repeat scroll 0 0 #777;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 -1px 1px black inset;
 }

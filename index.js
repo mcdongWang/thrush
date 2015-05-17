@@ -6,7 +6,7 @@ var libHttp = require('http');    //HTTP协议模块
 var libUrl=require('url');    	//URL解析模块
 global.libFs = require("fs");    //文件系统模块
 var libPath = require("path");    //路径解析模块
-global.controller = require("./controller.js"); 
+global.controller = require("./controller.js");
 var querystring = require("querystring");
 // global.util = require('util');
 // global.buffer = require('buffer');
@@ -37,7 +37,7 @@ var funWebSvr = function (req, res){
 		}
 
 		var monthValue = (date.getMonth() + 1) < 10 ? '0' + (date.getMonth() + 1) : '' + (date.getMonth() + 1);
-		
+
 		if (!libFs.existsSync('/tmp/log/thrush/' + date.getUTCFullYear() + '/' + monthValue)) {
 
 			libFs.mkdirSync('/tmp/log/thrush/' + date.getUTCFullYear() + '/' + monthValue);
@@ -56,7 +56,7 @@ var funWebSvr = function (req, res){
 	req.logUrl = dataUrl;
 
 	//获取请求的url
-	var reqUrl = req.url; 
+	var reqUrl = req.url;
 
 	//使用url解析模块获取url中的路径名
 	var pathName = libUrl.parse(reqUrl).pathname;
@@ -67,7 +67,7 @@ var funWebSvr = function (req, res){
 			suffixType = 'css';
 		}else if (suffix[1] == 'js') {
 			suffixType = 'js';
-		}else if (suffix[1] == 'jpg' || suffix[1] == 'png' || suffix[1] == 'gif') {
+		}else if (suffix[1] == 'jpg' || suffix[1] == 'png' || suffix[1] == 'gif' || suffix[1] == 'ico') {
 			suffixType = 'img';
 		}else{
 			suffixType = suffix[1];
@@ -141,7 +141,7 @@ var render200 = function(model, req, res, pathAccess, pathName){
 
 		modObj.req.__get = {};
 		modObj.req.__post = {};
-	
+
 		if(req.method == "GET"){
 	        var params = [];
 	        params = libUrl.parse(req.url,true).query;
@@ -172,15 +172,15 @@ var render200 = function(model, req, res, pathAccess, pathName){
 var webSvr = libHttp.createServer(funWebSvr);
 
 //指定服务器错误事件响应
-webSvr.on("error", function(error) { 
+webSvr.on("error", function(error) {
 	console.log(error);  //在控制台中输出错误信息
-}); 
+});
 
 //开始侦听8124端口
 webSvr.listen(8124,function(){
 
 	//向控制台输出服务启动的信息
-	console.log('[WebSvr][Start] running at http://127.0.0.1:8124/'); 
+	console.log('[WebSvr][Start] running at http://127.0.0.1:8124/');
 
 	//结束服务启动计时器并输出
 	console.timeEnd('[WebSvr][Start]');
