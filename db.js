@@ -1,11 +1,9 @@
 var orm = require("orm");
 
 var opt = {
-    host:     'localhost',
-    database: 'lark',
-    user:     'root',
-    password: '',
-    protocol: 'mysql'
+    host:     '127.0.0.1',
+    database: 'demo',
+    protocol: 'mongodb'
 }
 
 var _cbk = function(data, self, key){
@@ -14,13 +12,22 @@ var _cbk = function(data, self, key){
 	return false;
 }
 
+var Connection
+
 function doDb (self, key, callback, _opt) {
 
-	orm.connect(opt, function (err, db) {
-		if (err) 
-			return _cbk(false, self, key);
-		callback(db, self, key, _cbk, _opt);
-	});
+    if(Connection){
+        callback(Connection, self, key, _cbk, _opt);
+    }else{
+        orm.connect('mongodb://127.0.0.1/demo', function (err, db) {
+            Connection = db
+            if (err){
+                console.log('==='+err)
+                return _cbk(false, self, key);
+            }
+            callback(db, self, key, _cbk, _opt);
+        })
+    }
 
 }
 
@@ -105,7 +112,7 @@ function dbResult (_this, fun) {
 		}else{
 			setTimeout(function(){
 				listenFun(fun, _this);
-			},100)		
+			},100)
 		}
 	}
 	listenFun(fun, _this);

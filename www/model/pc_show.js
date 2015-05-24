@@ -13,10 +13,9 @@ var dbThis = function(cbk){
 	    },
 		'findList' : {}
 	});
-	
+
 	db.dbResult(this, function(_self){
 		return cbk(null ,_self.stack.find);
 	});
-
 }
 exports.dbThis = dbThis;

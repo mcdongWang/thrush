@@ -3,3 +3,6 @@
 .con{
 	display: none;
 }
+td{
+    border: 1px solid #000;
+}

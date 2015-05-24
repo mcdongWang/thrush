@@ -26,7 +26,7 @@ _controller.prototype = {
 			data[i] = './www/model' + php[i] + '.js';
 			var url = self.listenDate[i];
 			if (!libFs.existsSync(data[i])) {
-				libFs.writeFileSync(self.req.logUrl , '404 ' + self.listenDate[i] + '\n', {'encoding' : 'utf8'});
+				libFs.writeFileSync(self.req.logUrl , '4041 ' + self.listenDate[i] + '\n', {'encoding' : 'utf8'});
 				self.listenDate[i] = 'false';
 				self.listenCount --;
 			}else{
@@ -38,7 +38,7 @@ _controller.prototype = {
 							var v = self.listenDate[i];
 							var _type = typeof(v);
 							if (_type != 'object') {
-								libFs.writeFileSync(self.req.logUrl , '404 ' + url + '\n', {'encoding' : 'utf8'});
+								libFs.writeFileSync(self.req.logUrl , '4042 ' + url + '\n', {'encoding' : 'utf8'});
 							}else{
 								libFs.writeFileSync(self.req.logUrl , '200 ' + url + '\n', {'encoding' : 'utf8'});
 							}
@@ -72,14 +72,14 @@ exports.__create = function(module, conf){
 
 	util.inherits(module, _controller);
 
-	if (conf) { 
-		for (var k in conf) 
+	if (conf) {
+		for (var k in conf)
 		module.prototype[k] = conf[k];
 	}
-	
+
 	return function(modName, appPath){
 		var modObj = new module;
 		return modObj;
 	}
-	
+
 }

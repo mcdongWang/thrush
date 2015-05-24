@@ -1,4 +1,5 @@
 fml.define('page/fang', [], function(require, exports) {
+
     // DOM加载完成后进行swiperinit
     $(document).ready(function () {
         // 进行基本配置及回调
@@ -102,4 +103,20 @@ fml.define('page/fang', [], function(require, exports) {
     }).on('mouseup', function(){
         rangeMouseDown = false
     })
+    if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/6./i)=="6."){
+        alert("请使用高级浏览器");
+        window.close()
+    }
+    else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/7./i)=="7."){
+        alert("请使用高级浏览器");
+        window.close()
+    }
+    else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/8./i)=="8."){
+        alert("请使用高级浏览器");
+        window.close()
+    }
+    else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/9./i)=="9."){
+        alert("请使用高级浏览器");
+        window.close()
+    }
 });
