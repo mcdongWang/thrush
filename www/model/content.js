@@ -4,13 +4,14 @@ var dbThis = function(cbk){
     this.count = 0;
 
     db.dbFind(this, 'find', {
-        'table' : 'a',
+        'table' : 'alert_FI',
         'list' : {
-            time_window : {type: 'text'}
-            , alert_A : {type: 'text'}
-            , alert_B : {type: 'text'}
-            , alert_fre : {type: 'text'}
-            , all_dip_pro : {type: 'text'}
+            sip : {type: 'text'}
+            , dip : {type: 'text'}
+            , alert : {type: 'text'}
+            , sip_alert_pro : {type: 'text'}
+            , sip_dip_alert_pro : {type: 'text'}
+            , all_alert_pro : {type: 'text'}
         },
         'findList' : {}
     });

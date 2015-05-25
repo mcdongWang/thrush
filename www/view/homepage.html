@@ -1,0 +1,52 @@
+<%# header.html #%>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-6 col-md-2">
+			<nav role="navigation">
+				<ul class="nav nav-pills nav-stacked">
+					<li role="presentation" class="active tab" data-index="0"><a href="#">实时攻击流</a></li>
+					<li role="presentation" class="tab" data-index="1"><a href="#">统计分析</a></li>
+					<li role="presentation" class="tab" data-index="2"><a href="#">规则库</a></li>
+					<li role="presentation" class="tab" data-index="3"><a href="#">报警关联</a></li>
+					<li role="presentation" class="tab" data-index="4"><a href="#">实时聚类</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="col-xs-6 col-md-10">
+			<div class="con">1</div>
+			<div class="con">
+				<div class="col-xs-6 col-md-6">
+					<h2>折线图</h2>
+				</div>
+				<div class="col-xs-6 col-md-6">
+					<h2>直方图</h2>
+				</div>
+				<div class="col-xs-6 col-md-6">
+					<h2>雷达图</h2>
+				</div>
+				<div class="col-xs-6 col-md-6">
+					<h2>饼图</h2>
+				</div>
+			</div>
+			<div class="con">
+				<table class="table table-striped" id="attr">
+					<caption>属性规则库</caption>
+				    <thead>
+				        <th>源IP</th>
+				        <th>目的IP</th>
+				        <th>攻击类型</th>
+				        <th>源ip概率</th>
+				        <th>攻击类型概率</th>
+				        <th>告警概率</th>
+				    </thead>
+				</table>
+			</div>
+			<div class="con">4</div>
+			<div class="con">5</div>
+		</div>
+	</div>
+</div>
+<%
+	fml.use('page/homepage');
+%>
+<%# footer.html #%>
