@@ -14,6 +14,10 @@ var conf = {
 	'get' : function(){
 		var data = {'date' : '/content'};
 		this.ajaxTo(data);
+	},
+	'post' : function(){
+		var data = {'date' : '/content'};
+		this.ajaxTo(data);
 	}
 };
 exports.__create = controller.__create(homepage, conf);

@@ -10,13 +10,21 @@ fml.define('page/homepage', ['jquery'], function(require, exports) {
             var str = ""
             for(var i in data.date){
                 str+= '<tr><td>'+data.date[i].sip+'</td>'+'<td>'+data.date[i].dip+'</td>'+'<td>'+data.date[i].alert+'</td>'+'<td>'+data.date[i].sip_alert_pro+'</td>'+'<td>'+data.date[i].sip_dip_alert_pro+'</td>'+'<td>'+data.date[i].all_alert_pro+'</td></tr>'
+                
             }
-            $('table').append(str)
+            $('table').prepend(str)
         })
-    }
-    getContent()
+    } 
+    setInterval(getContent,3000)
 
-    $('button').on('click', function(){
-        getContent()
-    })
+    function getContent(){
+        $.post('/homepage/post', function(data){
+            var str = ""
+            for(var i in data.date){
+                str+= '<tr><td>'+data.date[i].time_window+'</td>'+'<td>'+data.date[i].alert_A+'</td>'+'<td>'+data.date[i].alert_B+'</td>'+'<td>'+data.date[i].alert_fre+'</td>'+'<td>'+data.date[i].all_dip_pro+'</td></tr>'
+                
+            }
+            $('table').prepend(str)
+        })
+    } 
 });
