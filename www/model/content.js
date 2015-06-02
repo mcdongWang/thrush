@@ -14,11 +14,12 @@ var dbThis = function(cbk){
             , all_alert_pro : {type: 'text'}
             , flag : {type: 'text'}
         },
-        'findList' : {'flag': '0'}
+        'findList' : {},
+        'limit' : 10
     });
 
-    db.dbFind(this, 'find', {
-        'table' : 'time',
+    db.dbFind(this, 'find1', {
+        'table' : 'Time_alert_FI',
         'list' : {
             time_window : {type: 'text'}
             , alert_A : {type: 'text'}
@@ -27,7 +28,8 @@ var dbThis = function(cbk){
             , all_dip_pro : {type: 'text'}
             , flag : {type: 'text'}
         },
-        'findList' : {'flag': '0'}
+        'findList' : {},
+        'limit' : 10
     });
 
     db.dbUpdate(this, 'update', {
@@ -41,12 +43,13 @@ var dbThis = function(cbk){
             , all_alert_pro : {type: 'text'}
             , flag : {type: 'text'}
         },
-        'findList' : {'flag': '0'},
-        'updateList' : {'flag': '1'}
+        'findList' : {},
+        'updateList' : {'flag': '1'},
+        'limit' : 10
     });
 
     db.dbResult(this, function(_self){
-        return cbk(null ,_self.stack.find);
+        return cbk(null ,[_self.stack.find, _self.stack.find1]);
     });
 }
 exports.dbThis = dbThis;

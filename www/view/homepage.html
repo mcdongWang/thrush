@@ -8,19 +8,21 @@
 					<li role="presentation" class="tab" data-index="1"><a href="#">统计分析</a></li>
 					<li role="presentation" class="tab" data-index="2"><a href="#">属性规则库</a></li>
 					<li role="presentation" class="tab" data-index="3"><a href="#">时序规则库</a></li>
-					<li role="presentation" class="tab" data-index="4"><a href="#">报警关联</a></li>
-					<li role="presentation" class="tab" data-index="5"><a href="#">实时聚类</a></li>
+					<li role="presentation" class="tab" data-index="4"><a href="#">实时聚类</a></li>
 				</ul>
 			</nav>
 		</div>
 		<div class="col-xs-6 col-md-10">
-			<div class="con">1</div>
+			<div class="con">
+				<!-- <iframe width="100%" height="100%" src="http://localhost:4001"></iframe> -->
+			</div>
 			<div class="con">
 				<div class="col-xs-6 col-md-6">
 					<h2>折线图</h2>
 				</div>
 				<div class="col-xs-6 col-md-6">
 					<h2>直方图</h2>
+					<div class="zf"></div>
 				</div>
 				<div class="col-xs-6 col-md-6">
 					<h2>雷达图</h2>
@@ -30,7 +32,7 @@
 				</div>
 			</div>
 			<div class="con">
-				<table class="table table-striped" id="attr">
+				<table class="table table-striped table1" id="attr">
 					<caption>属性规则库</caption>
 				    <thead>
 				        <th>源IP</th>
@@ -43,7 +45,7 @@
 				</table>
 			</div>
 			<div class="con">
-				<table class="table table-striped" id="time">
+				<table class="table table-striped table2" id="time">
 					<caption>时序规则库</caption>
 				    <thead>
 				        <th>时间窗口</th>
@@ -55,7 +57,6 @@
 				</table>
 			</div>
 			<div class="con">4</div>
-			<div class="con">5</div>
 		</div>
 	</div>
 </div>

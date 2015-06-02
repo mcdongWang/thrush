@@ -37,7 +37,7 @@ function dbFind (self, key, _opt) {
 		var _self = self,
 			_key = key;
 		var MYTABLE = db.define(_opt.table, _opt.list);
-		db.models[_opt.table].find(_opt.findList, function(err, rows) {
+		db.models[_opt.table].find(_opt.findList, _opt.limit, function(err, rows) {
 			if (err) {
     			return console.error('Connection error: ' + err);
     			_cbk([false], self, key);
@@ -54,7 +54,7 @@ function dbUpdate (self, key, _opt) {
 		var _self = self,
 			_key = key;
 		var MYTABLE = db.define(_opt.table, _opt.list);
-		db.models[_opt.table].find(_opt.findList).each(function(rows) {
+		db.models[_opt.table].find(_opt.findList, _opt.limit).each(function(rows) {
 			for(var i in _opt.updateList){
 				rows[i] = _opt.updateList[i];
 			}
@@ -75,7 +75,7 @@ function dbRemove (self, key, _opt) {
 		var _self = self,
 			_key = key;
 		var MYTABLE = db.define(_opt.table, _opt.list);
-		db.models[_opt.table].find(_opt.removeList).remove(function (err) {
+		db.models[_opt.table].find(_opt.removeList, _opt.limit).remove(function (err) {
     		if (err) {
     			return console.error('Connection error: ' + err);
     			_cbk([false], self, key);
@@ -92,7 +92,7 @@ function dbInsert (self, key, _opt) {
 		var _self = self,
 			_key = key;
 		var MYTABLE = db.define(_opt.table, _opt.list);
-		db.models[_opt.table].create(_opt.insertList, function (err, items) {
+		db.models[_opt.table].create(_opt.insertList, _opt.limit, function (err, items) {
     		if (err) {
     			return console.error('Connection error: ' + err);
     			_cbk([false], self, key);

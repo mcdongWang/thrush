@@ -1,15 +1,16 @@
 var fs = require('fs') ,
     path = require("path");
-    
+
 var isWindows = process.platform === 'win32';
 
+console.log('1111111')
 function listenToChange (file ){
     file = path.resolve(file)
    function onChg(prev,now) {
        if (prev.mtime == now.mtime  ) return;
        delete require.cache[file] ;
 
-       } 
+       }
 
    if (isWindows)
         fs.watch(file ,{ persistent: true, interval: 1000 } , onChg);
@@ -31,16 +32,16 @@ function mapDir (dir ,ext) {
                     listenToChange(file);
 
                         }
-           
+
            } );
        });
 
-       }); 
-    }   
+       });
+    }
 
  /*
  'somedir' | ['somedir' , 'another dir']
- */  
+ */
 exports.takeCare = function( dir , ext){
     if ('string' == typeof dir) dir = [dir];
 
