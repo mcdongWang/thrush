@@ -3,17 +3,19 @@ fml.define('page/homepage', [], function(require, exports) {
     // 基于准备好的dom，初始化echarts图表
     var myChart = echarts.init(document.getElementById('zf'));
 
-            var option = {
+    $.get('/homepage/zf', function(data){
+        console.log(data)
+        var option = {
             tooltip: {
                 show: true
             },
             legend: {
-                data:['销量']
+                data:['脆弱口令', '穷举探测', '缓冲溢出', '安全扫描', '木马后门']
             },
             xAxis : [
                 {
                     type : 'category',
-                    data : ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+                    data : ['201501', '201502', '201503', '201504']
                 }
             ],
             yAxis : [
@@ -23,15 +25,39 @@ fml.define('page/homepage', [], function(require, exports) {
             ],
             series : [
                 {
-                    "name":"销量",
+                    "name":"脆弱口令",
                     "type":"bar",
-                    "data":[5, 20, 40, 10, 10, 20]
+                    "data":[14,24,35,23]
+                },
+                {
+                    "name":"穷举探测",
+                    "type":"bar",
+                    "data":[14,24,35,23]
+                },
+                {
+                    "name":"缓冲溢出",
+                    "type":"bar",
+                    "data":[14,24,35,23]
+                },
+                {
+                    "name":"安全扫描",
+                    "type":"bar",
+                    "data":[14,24,35,23]
+                },
+                {
+                    "name":"木马后门",
+                    "type":"bar",
+                    "data":[14,24,35,23]
                 }
             ]
         };
 
         // 为echarts对象加载数据
         myChart.setOption(option);
+    })
+
+
+
 
     $('.con').eq(0).show();
     $('.tab').on('click', function(){

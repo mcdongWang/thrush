@@ -15,6 +15,10 @@ var conf = {
 		var data = {'date' : '/content'};
 		this.ajaxTo(data);
 	},
+	'zf' : function(){
+		var data = {'date' : '/zf'}
+		this.ajaxTo(data)
+	},
 	'post' : function(){
 		var data = {'date' : '/content'};
 		this.ajaxTo(data);
